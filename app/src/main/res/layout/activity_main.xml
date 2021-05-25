@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/contacts_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:titleTextColor="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        style="@style/AppTheme.Toolbar"/>
+
+    <Button
+        android:id="@+id/btnActionHost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:onClick="startService"
+        android:text="@string/become_a_host" />
+
+    <Button
+        android:id="@+id/btnActionClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnActionHost"
+        android:layout_centerHorizontal="true"
+        android:onClick="startClient"
+        android:text="@string/become_a_client" />
+
+</RelativeLayout>

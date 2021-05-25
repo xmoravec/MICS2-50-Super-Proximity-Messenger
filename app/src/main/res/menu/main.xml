@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/profile_info"
+        android:orderInCategory="1"
+        android:title="@string/profile_info"
+        android:visible="true"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/self_message"
+        android:orderInCategory="2"
+        android:title="@string/self_message"
+        android:visible="true"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="3"
+        android:title="@string/settings"
+        app:showAsAction="never"
+        android:visible="true" />
+
+
+</menu>
