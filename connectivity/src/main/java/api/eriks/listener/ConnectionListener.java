@@ -1,6 +1,7 @@
 package api.eriks.listener;
 
 import com.google.android.gms.nearby.connection.ConnectionInfo;
+
 import api.eriks.ConnectionServiceImpl;
 
 public interface ConnectionListener {

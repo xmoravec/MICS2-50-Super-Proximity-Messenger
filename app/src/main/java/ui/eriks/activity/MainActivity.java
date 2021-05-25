@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 beginActivity(UserInfoActivity.class);
                 return true;
             case R.id.self_message:
-                beginActivity(ClientChatRoomActivity.class);
+                beginActivity(ClientChatActivity.class);
                 return true;
             case R.id.action_settings:
                 beginActivity(SettingsActivity.class);

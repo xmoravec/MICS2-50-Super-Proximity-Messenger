@@ -1,33 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="error_missing_permissions">Cannot start without required permissions</string>
-
-    <string name="codename">Your codename: %s</string>
-    <string name="opponent_name">Opponent: %s</string>
-    <string name="no_opponent">none (yet)</string>
-
     <string name="status_disconnected">Disconnected</string>
     <string name="status_searching">Searching</string>
     <string name="status_connected">Connected</string>
-
-    <string name="game_choice">You chose %s</string>
-
-    <string name="win_message">%1$s beats %2$s!</string>
-    <string name="tie_message">You both chose %s</string>
-    <string name="loss_message">%1$s loses to %2$s…</string>
-
-    <string name="action_find_opponents">Find opponent</string>
     <string name="action_disconnect">Disconnect</string>
-
-    <string name="choice_rock">Rock</string>
-    <string name="choice_paper">Paper</string>
-    <string name="choice_scissors">Scissors</string>
-
-    <string name="game_score">%1$d : %2$d</string>
     <string name="create">Create</string>
-    <string name="connecting">Connecting...</string>
-    <string name="become_a_host">Start Advertising (Host)</string>
-    <string name="become_a_client">Start Discovery (Client)</string>
+    <string name="connecting">Connecting…</string>
     <string name="host_chat_room">Host Chat Room</string>
     <string name="app_name">Super Proximity Messenger</string>
     <string name="no_contact">You have no contacts nearby</string>
@@ -37,14 +16,10 @@
     <string name="welcome">Welcome to Proximity Messenger</string>
     <string name="settings">Settings</string>
     <string name="title_activity_message">MessageActivity</string>
-    <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="self_message">Message yourself</string>
     <string name="profile_info">About you</string>
     <string name="your_sex">Your sex:</string>

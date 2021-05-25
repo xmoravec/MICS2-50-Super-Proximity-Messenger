@@ -65,6 +65,6 @@ public class HostActivity extends EndpointActivity implements AdvertisingListene
 
     public void startChatRoom(View view) {
         if (connectionService.getConnectedEndpoints().size() > 0)
-            HostChatRoomActivity.startHostChatRoomActivity(HostActivity.this);
+            HostChatActivity.startHostChatRoomActivity(HostActivity.this);
     }
 }

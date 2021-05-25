@@ -73,7 +73,7 @@ public class ClientActivity extends EndpointActivity implements DiscoveryListene
             @Override
             public void onClick(View view) {
                 Endpoint endpoint = (Endpoint) view.getTag();
-                ClientChatRoomActivity.startChatActivity(ClientActivity.this, endpoint);
+                ClientChatActivity.startChatActivity(ClientActivity.this, endpoint);
             }
         };
     }

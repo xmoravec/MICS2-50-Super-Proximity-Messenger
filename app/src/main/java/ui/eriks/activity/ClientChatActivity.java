@@ -27,7 +27,7 @@ import ui.eriks.ChatAdapter;
 import ui.eriks.ProximityMessenger;
 import ui.eriks.R;
 
-public class ClientChatRoomActivity extends AppCompatActivity implements DataListener {
+public class ClientChatActivity extends AppCompatActivity implements DataListener {
     private ChatAdapter chat;
     private EditText messageInput;
     private ConnectionServiceImpl.Endpoint endpoint;
@@ -105,7 +105,7 @@ public class ClientChatRoomActivity extends AppCompatActivity implements DataLis
     }
 
     public static void startChatActivity(Context context, ConnectionServiceImpl.Endpoint endpoint) {
-        Intent intent = new Intent(context, ClientChatRoomActivity.class);
+        Intent intent = new Intent(context, ClientChatActivity.class);
         intent.putExtra("endpoint", endpoint);
         context.startActivity(intent);
     }

@@ -28,7 +28,7 @@ import ui.eriks.ChatAdapter;
 import ui.eriks.ProximityMessenger;
 import ui.eriks.R;
 
-public class HostChatRoomActivity extends AppCompatActivity implements DataListener, EndpointListener {
+public class HostChatActivity extends AppCompatActivity implements DataListener, EndpointListener {
     private ChatAdapter chat;
     private EditText messageField;
     private ConnectionServiceImpl connectionServiceImpl;
@@ -38,7 +38,7 @@ public class HostChatRoomActivity extends AppCompatActivity implements DataListe
 
 
     public static void startHostChatRoomActivity(Context context) {
-        Intent intent = new Intent(context, HostChatRoomActivity.class);
+        Intent intent = new Intent(context, HostChatActivity.class);
         context.startActivity(intent);
     }
 

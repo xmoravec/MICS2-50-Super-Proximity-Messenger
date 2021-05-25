@@ -6,8 +6,6 @@ public class Message {
     private long timestamp;
     private boolean isMyChat;
 
-    public Message() {}
-
     public Message(String message, boolean isMyChat, long timestamp) {
         this.message = message;
         this.isMyChat = isMyChat;
@@ -33,16 +31,8 @@ public class Message {
         return message;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
     public long getTimestamp() {
         return timestamp;
-    }
-
-    public void setTimestamp(long timestamp) {
-        this.timestamp = timestamp;
     }
 
     public boolean isMyChat() {

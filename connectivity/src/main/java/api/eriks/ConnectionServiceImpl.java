@@ -1,9 +1,7 @@
 package api.eriks;
 
 import android.content.Context;
-import android.util.Log;
 
-import androidx.annotation.CallSuper;
 import androidx.annotation.NonNull;
 
 import com.google.android.gms.nearby.Nearby;
@@ -21,12 +19,6 @@ import com.google.android.gms.nearby.connection.PayloadTransferUpdate;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import api.eriks.listener.AdvertisingListener;
-import api.eriks.listener.ConnectionListener;
-import api.eriks.listener.ConnectionService;
-import api.eriks.listener.DataListener;
-import api.eriks.listener.DiscoveryListener;
-import api.eriks.listener.EndpointListener;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -35,8 +27,14 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import api.eriks.listener.AdvertisingListener;
+import api.eriks.listener.ConnectionListener;
+import api.eriks.listener.ConnectionService;
+import api.eriks.listener.DataListener;
+import api.eriks.listener.DiscoveryListener;
+import api.eriks.listener.EndpointListener;
+
 public class ConnectionServiceImpl {
-    private static final String TAG = ConnectionServiceImpl.class.getSimpleName();
     private final ConnectionsClient connectionsClient;
     private final Map<String, Endpoint> endpoints = new HashMap<>();
     private final Map<String, Endpoint> pendingConnections = new HashMap<>();
@@ -48,7 +46,6 @@ public class ConnectionServiceImpl {
     private EndpointListener endpointListener;
     private ConnectionListener connectionListener;
     private ConnectionService connectionService;
-    private Context context;
 
     public static ConnectionServiceImpl getInstance(Context context) {
         synchronized (ConnectionServiceImpl.class) {
@@ -57,7 +54,6 @@ public class ConnectionServiceImpl {
     }
 
     private ConnectionServiceImpl(Context context) {
-        this.context = context;
         connectionsClient = Nearby.getConnectionsClient(context);
     }
 
@@ -199,9 +195,7 @@ public class ConnectionServiceImpl {
         Task<Void> voidTask = connectionsClient.sendPayload(new ArrayList<>(endpoints), payload);
         voidTask.addOnFailureListener(new OnFailureListener() {
             @Override
-            public void onFailure(@NonNull Exception e) {
-                logW("sendPayload() failed.", e);
-            }
+            public void onFailure(@NonNull Exception e) { }
         });
     }
 
@@ -230,11 +224,6 @@ public class ConnectionServiceImpl {
 
     public void setNearByServiceListener(ConnectionService mConnectionService) {
         this.connectionService = mConnectionService;
-    }
-
-    @CallSuper
-    public void logW(String msg, Throwable e) {
-        Log.w(TAG, msg, e);
     }
 
     public static class Endpoint implements Serializable {

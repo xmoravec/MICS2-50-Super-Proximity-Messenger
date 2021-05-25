@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.ClientChatRoomActivity"
+            android:name=".activity.ClientChatActivity"
             android:parentActivityName=".activity.MainActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
@@ -36,7 +36,7 @@
                 android:value="ui.eriks.activity.MainActivity" />
         </activity>
         <activity
-            android:name=".activity.HostChatRoomActivity"
+            android:name=".activity.HostChatActivity"
             android:parentActivityName=".activity.MainActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
